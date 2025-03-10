@@ -4,17 +4,18 @@ using namespace std;
 int main() {
     // Variabel untuk login
     string username, password;
-    string correctUsername = "Danendra Hazzel Putra Wahana"; // Ganti dengan nama lengkap kalian
-    string correctPassword = "2409106096"; // Ganti dengan NIM kalian
+    string Username = "Danendra Hazzel Putra Wahana"; // Ganti dengan nama lengkap kalian
+    string Password = "2409106096"; // Ganti dengan NIM kalian
 
     // Login
+    cout << "Silahkan Login terlebih dahulu\n";
     cout << "Masukkan Username: ";
     getline(cin, username);
     cout << "Masukkan Password: ";
     getline(cin, password);
 
     // Cek login
-    if (username == correctUsername && password == correctPassword) {
+    if (username == Username && password == Password) {
         int choice;
         do {
             // Menu Utama
@@ -146,10 +147,12 @@ int main() {
                     break;
                 default:
                     cout << "Pilihan tidak valid. Silakan coba lagi.\n";
+                    break;
             }
         } while (choice != 4);
     } else {
         cout << "Username atau Password salah.\n";
+
     }
 
     return 0;
