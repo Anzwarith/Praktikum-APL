@@ -36,13 +36,14 @@ int main() {
 
     // Login system
     while (loginAttempts < 3) {
-        cout << "===== SELAMAT DATANG! SILAHKAN LOGIN TERLEBIH DAHULU =====\n";
+        cout << "===== LOGIN SISTEM BOOKING TIKET BIOSKOP =====\n";
         cout << "Masukkan Nama: ";
-        cin >> nama;
+        cin.ignore(); // Membersihkan buffer input sebelum menggunakan getline
+        getline(cin, nama); // Menggunakan getline untuk membaca nama dengan spasi
         cout << "Masukkan Password: ";
         cin >> password;
 
-        if (nama == "DHPW" && password == "096") {
+        if (nama == "Danendra Hazzel PW" && password == "2409106096") {
             cout << "Login berhasil!\n";
             cout << "Selamat Datang Diaplikasi Pemesanan Tiket Online Tuan " << nama << endl;
             break;
@@ -53,7 +54,7 @@ int main() {
     }
 
     if (loginAttempts == 3) {
-        cout << "Kesempatan anda telah habis, silahkan mencoba dalam beberapa saat lagi\n";
+        cout << "Percobaan anda telah habis, silahkan mencoba dalam beberapa saat lagi\n";
         return 0;
     }
 
@@ -66,7 +67,7 @@ int main() {
         cout << "4. Ganti Jam Tayang\n";
         cout << "5. Batalkan Tiket\n";
         cout << "6. Bayar Tiket\n";
-        cout << "7. Keluar Aplikasi\n";
+        cout << "7. Keluar\n";
         cout << "Pilihan Anda: ";
         cin >> pilihan;
         
